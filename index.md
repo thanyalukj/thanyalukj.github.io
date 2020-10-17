@@ -1,6 +1,4 @@
 # thanyalukj.github.io
 
-I'm an engineering manager at Unity Technologies.
-
-## Galaxy Shooter
-This is my hobby project. So, I can understand how game developers use Unity and Unity's tools.
+## Galaxy Shooter Privacy Policy
+Galaxy Shooter is built Using Unity. Please see [Unity's Privacy Policy](https://unity3d.com/legal/privacy-policy) for information about what data is being collected.
