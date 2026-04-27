@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../content/site.ts";
+---
+<BaseLayout title="About">
+  <article class="prose">
+    <div class="eyebrow">About</div>
+    <h1 class="headline">{site.name}</h1>
+    {site.about.map((para) => <p>{para}</p>)}
+  </article>
+</BaseLayout>
