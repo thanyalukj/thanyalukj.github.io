@@ -1,0 +1,33 @@
+---
+import { site } from "../content/site.ts";
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="links">
+    {site.links.map((l) => (
+      <a href={l.href}>{l.label}</a>
+    ))}
+  </div>
+  <div class="copyright">© {year} {site.fullName}</div>
+</footer>
+
+<style>
+  .footer {
+    margin-top: 80px;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-rule);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--color-muted);
+  }
+  .links a {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-underline);
+    text-underline-offset: 3px;
+    margin-right: 14px;
+  }
+  .copyright {
+    margin-top: 10px;
+  }
+</style>

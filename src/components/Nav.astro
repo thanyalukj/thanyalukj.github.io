@@ -1,0 +1,38 @@
+---
+import { site } from "../content/site.ts";
+---
+<nav class="nav">
+  <a class="brand" href="/">{site.name.toLowerCase().replace(/[^a-z]/g, "")}</a>
+  <span class="links">
+    <a href="/writing">Writing</a>
+    <a href="/about">About</a>
+  </span>
+</nav>
+
+<style>
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--color-muted);
+    border-bottom: 1px solid var(--color-rule);
+    padding-bottom: 14px;
+    margin-bottom: 36px;
+  }
+  .brand {
+    color: var(--color-text);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .links a {
+    color: var(--color-muted);
+    text-decoration: none;
+    margin-left: 16px;
+  }
+  .links a:hover {
+    color: var(--color-text);
+  }
+</style>
