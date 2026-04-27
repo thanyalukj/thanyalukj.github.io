@@ -1,0 +1,39 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { formatPostDateLong } from "../lib/format.ts";
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  minutes: number;
+}
+
+const { title, description, pubDate, minutes } = Astro.props;
+---
+<BaseLayout title={title} description={description}>
+  <article class="prose">
+    <h1 class="post-title">{title}</h1>
+    <div class="meta">{formatPostDateLong(pubDate)} · {minutes} min read</div>
+    <slot />
+  </article>
+</BaseLayout>
+
+<style>
+  .post-title {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: clamp(28px, 4.5vw, 34px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+  .meta {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 28px;
+  }
+</style>
