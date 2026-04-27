@@ -1,9 +1,9 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: 'https://thanyalukj.com',
-  trailingSlash: 'never',
+  site: "https://thanyalukj.com",
+  trailingSlash: "never",
   build: {
-    format: 'directory',
+    format: "directory",
   },
 });

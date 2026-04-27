@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import NowBlock from "../components/NowBlock.astro";
 import { site } from "../content/site.ts";
 ---
+
 <BaseLayout>
   <section>
     <div class="eyebrow">{site.name}</div>
@@ -12,9 +13,7 @@ import { site } from "../content/site.ts";
     <NowBlock />
 
     <div class="links">
-      {site.links.map((l) => (
-        <a href={l.href}>{l.label}</a>
-      ))}
+      {site.links.map((l) => <a href={l.href}>{l.label}</a>)}
     </div>
   </section>
 </BaseLayout>

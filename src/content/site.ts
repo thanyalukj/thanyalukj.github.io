@@ -4,14 +4,14 @@ export interface SiteLink {
 }
 
 export interface SiteConfig {
-  name: string;          // Eyebrow on homepage, brand in nav
-  fullName: string;      // For footer / SEO
-  url: string;           // Production origin, no trailing slash
-  headline: string;      // Homepage h1
-  bio: string;           // 1-2 sentence homepage bio
-  now: string;           // 1-2 sentences for the "Now" block
-  about: string[];       // /about page paragraphs
-  links: SiteLink[];     // Homepage + footer link row (in display order)
+  name: string; // Eyebrow on homepage, brand in nav
+  fullName: string; // For footer / SEO
+  url: string; // Production origin, no trailing slash
+  headline: string; // Homepage h1
+  bio: string; // 1-2 sentence homepage bio
+  now: string; // 1-2 sentences for the "Now" block
+  about: string[]; // /about page paragraphs
+  links: SiteLink[]; // Homepage + footer link row (in display order)
 }
 
 export const site: SiteConfig = {
@@ -27,9 +27,9 @@ export const site: SiteConfig = {
     "Outside of work I'm usually reading, walking, or tinkering with a side project that I'll probably never finish.",
   ],
   links: [
-    { label: "GitHub",   href: "https://github.com/thanyalukj" },
+    { label: "GitHub", href: "https://github.com/thanyalukj" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/thanyalukj" },
-    { label: "Email",    href: "mailto:thanyalukj@gmail.com" },
+    { label: "Email", href: "mailto:thanyalukj@gmail.com" },
     { label: "Writing →", href: "/writing" },
   ],
 };

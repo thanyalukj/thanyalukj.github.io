@@ -2,11 +2,10 @@
 import { site } from "../content/site.ts";
 const year = new Date().getFullYear();
 ---
+
 <footer class="footer">
   <div class="links">
-    {site.links.map((l) => (
-      <a href={l.href}>{l.label}</a>
-    ))}
+    {site.links.map((l) => <a href={l.href}>{l.label}</a>)}
   </div>
   <div class="copyright">© {year} {site.fullName}</div>
 </footer>

@@ -7,31 +7,34 @@ const all = await getCollection("writing", ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
 });
 
-const posts = all.sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = all.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
+
 <BaseLayout title="Writing" description="Notes & essays.">
   <section>
     <div class="eyebrow">Writing</div>
     <h1 class="headline">Notes &amp; essays.</h1>
     <p class="bio">Mostly software, sometimes tangents. Newest first.</p>
 
-    {posts.length === 0 ? (
-      <p class="empty">Nothing published yet. Come back soon.</p>
-    ) : (
-      <ul class="post-list">
-        {posts.map((p) => (
-          <li class="row">
-            <div class="date">{formatPostDate(p.data.pubDate)}</div>
-            <div class="entry">
-              <a class="title" href={`/writing/${p.slug}`}>{p.data.title}</a>
-              <p class="desc">{p.data.description}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
-    )}
+    {
+      posts.length === 0 ? (
+        <p class="empty">Nothing published yet. Come back soon.</p>
+      ) : (
+        <ul class="post-list">
+          {posts.map((p) => (
+            <li class="row">
+              <div class="date">{formatPostDate(p.data.pubDate)}</div>
+              <div class="entry">
+                <a class="title" href={`/writing/${p.slug}`}>
+                  {p.data.title}
+                </a>
+                <p class="desc">{p.data.description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </section>
 </BaseLayout>
 
@@ -53,7 +56,9 @@ const posts = all.sort(
     border-bottom: 1px dashed var(--color-rule);
     align-items: baseline;
   }
-  .row:last-child { border-bottom: 0; }
+  .row:last-child {
+    border-bottom: 0;
+  }
   .date {
     font-family: var(--font-sans);
     font-size: 11px;

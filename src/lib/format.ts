@@ -1,7 +1,4 @@
-const MONTHS = [
-  "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
-  "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",
-];
+const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
 export function formatPostDate(date: Date): string {
   const y = date.getUTCFullYear();
@@ -11,8 +8,18 @@ export function formatPostDate(date: Date): string {
 
 export function formatPostDateLong(date: Date): string {
   const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   return `${months[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
 }

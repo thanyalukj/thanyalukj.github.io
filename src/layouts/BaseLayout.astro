@@ -14,6 +14,7 @@ const pageTitle = title ? `${title} — ${site.name}` : site.name;
 const pageDesc = description ?? site.bio;
 const canonical = new URL(Astro.url.pathname, site.url).toString();
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
