@@ -1,0 +1,80 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatPostDate } from "../../lib/format.ts";
+
+const all = await getCollection("writing", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
+
+const posts = all.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+<BaseLayout title="Writing" description="Notes & essays.">
+  <section>
+    <div class="eyebrow">Writing</div>
+    <h1 class="headline">Notes &amp; essays.</h1>
+    <p class="bio">Mostly software, sometimes tangents. Newest first.</p>
+
+    {posts.length === 0 ? (
+      <p class="empty">Nothing published yet. Come back soon.</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map((p) => (
+          <li class="row">
+            <div class="date">{formatPostDate(p.data.pubDate)}</div>
+            <div class="entry">
+              <a class="title" href={`/writing/${p.slug}`}>{p.data.title}</a>
+              <p class="desc">{p.data.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .empty {
+    color: var(--color-muted);
+    font-style: italic;
+  }
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 18px;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--color-rule);
+    align-items: baseline;
+  }
+  .row:last-child { border-bottom: 0; }
+  .date {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--color-muted);
+    letter-spacing: 0.06em;
+  }
+  .title {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  .title:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-underline);
+    text-underline-offset: 3px;
+  }
+  .desc {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 3px 0 0;
+  }
+</style>
