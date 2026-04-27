@@ -1,0 +1,30 @@
+---
+import { site } from "../content/site.ts";
+---
+<aside class="now">
+  <div class="label">Now</div>
+  <p>{site.now}</p>
+</aside>
+
+<style>
+  .now {
+    border-left: 2px solid var(--color-accent-underline);
+    padding: 4px 0 4px 14px;
+    margin: 22px 0 28px;
+    max-width: var(--width-bio);
+  }
+  .label {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 4px;
+  }
+  .now p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+</style>
