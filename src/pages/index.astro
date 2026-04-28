@@ -11,21 +11,5 @@ import { site } from "../content/site.ts";
     <p class="bio">{site.bio}</p>
 
     <NowBlock />
-
-    <div class="links">
-      {site.links.map((l) => <a href={l.href}>{l.label}</a>)}
-    </div>
   </section>
 </BaseLayout>
-
-<style>
-  .links {
-    font-family: var(--font-sans);
-    font-size: 13px;
-    border-top: 1px solid var(--color-rule);
-    padding-top: 16px;
-  }
-  .links a {
-    margin-right: 14px;
-  }
-</style>
