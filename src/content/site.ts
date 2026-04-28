@@ -30,7 +30,7 @@ export const site: SiteConfig = {
   links: [
     { label: "GitHub", href: "https://github.com/thanyalukj" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/thanyalukj" },
-    { label: "Email", href: "mailto:thanyalukj@gmail.com" },
+    { label: "X", href: "https://x.com/thanyalukj" },
     { label: "Writing →", href: "/writing" },
   ],
 };
