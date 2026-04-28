@@ -16,15 +16,16 @@ export interface SiteConfig {
 
 export const site: SiteConfig = {
   name: "Thanyaluk J.",
-  fullName: "Thanyaluk Jirachaipitak",
+  fullName: "Thanyaluk Jirapech-umpai",
   url: "https://thanyalukj.com",
   headline: "Senior software engineer building thoughtful products.",
-  bio: "Bangkok-based. Currently focused on healthcare software and developer tooling.",
-  now: "Building a GDM monitoring system. Learning Rust on weekends.",
+  bio: "Edinburgh-based senior mobile engineer at FanDuel.",
+  now: "Building shared mobile libraries used across FanDuel's apps — code that works the same way everywhere it's used.",
   about: [
-    "I'm a senior software engineer based in Bangkok. I work on healthcare software and developer tooling — small teams, real users, code that has to keep working when no one's watching.",
-    "I care about clear interfaces, honest documentation, and software that respects the time of the people using it.",
-    "Outside of work I'm usually reading, walking, or tinkering with a side project that I'll probably never finish.",
+    "I'm a senior mobile engineer based in Edinburgh, Scotland. I'm originally from Thailand and moved here in 2008; before that I taught computer science at Chiang Mai University for a few years, with a master's in informatics from the University of Edinburgh somewhere in between.",
+    "Since September 2024 I've been at FanDuel, working on shared mobile libraries — the kind of foundational code that powers multiple apps and has to work the same way everywhere it's used. It's a return: I was at FanDuel earlier in my career too, leading the growth team's mobile work between 2015 and 2018.",
+    "In between I spent four years at Unity on the Analytics SDK for Made With Unity projects — full-stack with React and Java — including a couple of years leading that team as Engineering Manager before I stepped back into a hands-on role, which is where I'm happiest. Before that: Hello Relish (mobile and Clojure backends), and earlier still, iOS apps for high-street retailers at Kotikan and NN4M.",
+    "The through-line is small teams, real users, and code that has to keep working when no one's watching. I care about clear interfaces, honest documentation, test-driven development, and software that respects the time of the people using it. Outside of work: gym, movies, travel, photography, and the occasional unfinished tune on the ukulele.",
   ],
   links: [
     { label: "GitHub", href: "https://github.com/thanyalukj" },
