@@ -36,8 +36,6 @@ For engineering, I rely on the superpowers plugin. But as a solo developer I nee
 
 - **UX/UI Designer.** This is the skill I use most when I'm laying out a screen. It first asks who the screen is for (a patient on a phone and a clinician at a desk need very different things), then produces an ASCII wireframe so I can argue about layout *before* any code is written. It bakes in healthcare-specific UX rules — never use color alone to signal risk, pair icons with text labels, large touch targets on mobile, no hover-only interactions — and points me at the right design-system components to use, which makes the handoff to implementation almost trivial.
 
----
-
 > Genesis 16:13 (NIV) She gave this name to the LORD who spoke to her: "You are the God who sees me," for she said, "I have now seen the One who sees me."
 
 Thank you, God, for you see in me thoroughly, you know what I need and provided me this project to work on.

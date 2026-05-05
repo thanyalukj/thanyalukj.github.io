@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # Brainstorming companion (local-only)
 .superpowers/
+
+# Documentation (local-only)
+docs/

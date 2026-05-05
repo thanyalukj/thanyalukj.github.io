@@ -10,11 +10,11 @@ const all = await getCollection("writing", ({ data }) => {
 const posts = all.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
-<BaseLayout title="Writing" description="Notes & essays.">
+<BaseLayout title="Writing" description="Notes">
   <section>
     <div class="eyebrow">Writing</div>
-    <h1 class="headline">Notes &amp; essays.</h1>
-    <p class="bio">Mostly software, sometimes tangents. Newest first.</p>
+    <h1 class="headline">Notes</h1>
+    <p class="bio">A mixture of software and tangents. Newest first.</p>
 
     {
       posts.length === 0 ? (
